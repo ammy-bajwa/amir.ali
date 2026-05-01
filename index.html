@@ -23,23 +23,23 @@
             --text-2: #a1a1aa;
             --text-3: #52525b;
 
-            /* Accent — cyan → violet → pink */
-            --cyan:   #22d3ee;
-            --violet: #a78bfa;
-            --pink:   #f472b6;
-            --amber:  #fbbf24;
+            /* Accent — sky blue → indigo → magenta */
+            --cyan:   #0ea5e9;
+            --violet: #6366f1;
+            --pink:   #d946ef;
+            --amber:  #e879f9;
 
-            --grad: linear-gradient(135deg, #22d3ee 0%, #a78bfa 50%, #f472b6 100%);
-            --grad-text: linear-gradient(135deg, #22d3ee 0%, #a78bfa 60%, #f472b6 100%);
+            --grad: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #d946ef 100%);
+            --grad-text: linear-gradient(135deg, #0ea5e9 0%, #6366f1 60%, #d946ef 100%);
 
             /* Borders */
             --border:       rgba(255,255,255,0.06);
-            --border-lit:   rgba(34,211,238,0.3);
-            --border-glow:  rgba(34,211,238,0.5);
+            --border-lit:   rgba(14,165,233,0.3);
+            --border-glow:  rgba(14,165,233,0.5);
 
             /* Shadows */
-            --glow-cyan: 0 0 60px rgba(34,211,238,0.15);
-            --glow-violet: 0 0 60px rgba(167,139,250,0.15);
+            --glow-cyan: 0 0 60px rgba(14,165,233,0.15);
+            --glow-violet: 0 0 60px rgba(99,102,241,0.15);
         }
 
         html { scroll-behavior: smooth; }
@@ -76,9 +76,9 @@
             position: fixed;
             inset: 0;
             background:
-                radial-gradient(ellipse 90% 60% at 15% 110%, rgba(34,211,238,0.045) 0%, transparent 55%),
-                radial-gradient(ellipse 70% 50% at 85% -10%, rgba(167,139,250,0.045) 0%, transparent 55%),
-                radial-gradient(ellipse 60% 40% at 50% 50%, rgba(244,114,182,0.025) 0%, transparent 60%);
+                radial-gradient(ellipse 90% 60% at 15% 110%, rgba(14,165,233,0.04) 0%, transparent 55%),
+                radial-gradient(ellipse 70% 50% at 85% -10%, rgba(99,102,241,0.04) 0%, transparent 55%),
+                radial-gradient(ellipse 60% 40% at 50% 50%, rgba(217,70,239,0.025) 0%, transparent 60%);
             animation: bgShift 18s ease-in-out infinite alternate;
             pointer-events: none;
             z-index: 0;
@@ -172,19 +172,19 @@
         }
         .orb-1 {
             width: 700px; height: 700px;
-            background: radial-gradient(circle, rgba(34,211,238,0.25) 0%, transparent 65%);
+            background: radial-gradient(circle, rgba(14,165,233,0.22) 0%, transparent 65%);
             top: -200px; left: -200px;
             animation: drift 12s ease-in-out infinite;
         }
         .orb-2 {
             width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(167,139,250,0.2) 0%, transparent 65%);
+            background: radial-gradient(circle, rgba(99,102,241,0.18) 0%, transparent 65%);
             bottom: -150px; right: -100px;
             animation: drift 9s ease-in-out infinite reverse;
         }
         .orb-3 {
             width: 350px; height: 350px;
-            background: radial-gradient(circle, rgba(244,114,182,0.18) 0%, transparent 65%);
+            background: radial-gradient(circle, rgba(217,70,239,0.16) 0%, transparent 65%);
             top: 35%; left: 55%;
             animation: drift 7s ease-in-out infinite 3s;
         }
@@ -204,8 +204,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(34,211,238,0.08);
-            border: 1px solid rgba(34,211,238,0.25);
+            background: rgba(14,165,233,0.08);
+            border: 1px solid rgba(14,165,233,0.25);
             border-radius: 99px;
             padding: 6px 18px;
             font-size: 0.78rem;
@@ -285,11 +285,11 @@
         .btn-grad {
             background: var(--grad);
             color: #000;
-            box-shadow: 0 4px 24px rgba(34,211,238,0.3);
+            box-shadow: 0 4px 24px rgba(14,165,233,0.3);
         }
         .btn-grad:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 10px 40px rgba(34,211,238,0.45);
+            box-shadow: 0 10px 40px rgba(14,165,233,0.45);
         }
         .btn-ghost {
             background: transparent;
@@ -298,7 +298,7 @@
         }
         .btn-ghost:hover {
             background: rgba(255,255,255,0.05);
-            border-color: rgba(34,211,238,0.4);
+            border-color: rgba(14,165,233,0.4);
             transform: translateY(-3px);
         }
 
@@ -349,7 +349,7 @@
             transition: background 0.3s;
         }
         .stat-cell:last-child { border-right: none; }
-        .stat-cell:hover { background: rgba(34,211,238,0.03); }
+        .stat-cell:hover { background: rgba(14,165,233,0.03); }
         .stat-cell::after {
             content: '';
             position: absolute;
@@ -449,7 +449,7 @@
         .avatar-bg::before {
             content: '';
             position: absolute; inset: 0;
-            background: linear-gradient(135deg, rgba(34,211,238,0.08) 0%, rgba(167,139,250,0.08) 100%);
+            background: linear-gradient(135deg, rgba(14,165,233,0.08) 0%, rgba(99,102,241,0.08) 100%);
         }
         .avatar-letters {
             font-size: 7rem;
@@ -567,8 +567,8 @@
         }
         .tag-list { display: flex; flex-wrap: wrap; gap: 6px; }
         .tag {
-            background: rgba(34,211,238,0.06);
-            border: 1px solid rgba(34,211,238,0.12);
+            background: rgba(14,165,233,0.06);
+            border: 1px solid rgba(14,165,233,0.12);
             color: var(--cyan);
             padding: 4px 10px;
             border-radius: 6px;
@@ -578,22 +578,22 @@
             font-family: 'JetBrains Mono', monospace;
         }
         .tag:hover {
-            background: rgba(34,211,238,0.14);
-            border-color: rgba(34,211,238,0.4);
+            background: rgba(14,165,233,0.14);
+            border-color: rgba(14,165,233,0.4);
         }
         .tag.violet {
-            background: rgba(167,139,250,0.08);
-            border-color: rgba(167,139,250,0.2);
+            background: rgba(99,102,241,0.08);
+            border-color: rgba(99,102,241,0.2);
             color: var(--violet);
         }
         .tag.pink {
-            background: rgba(244,114,182,0.08);
-            border-color: rgba(244,114,182,0.2);
+            background: rgba(217,70,239,0.08);
+            border-color: rgba(217,70,239,0.2);
             color: var(--pink);
         }
         .tag.amber {
-            background: rgba(251,191,36,0.08);
-            border-color: rgba(251,191,36,0.2);
+            background: rgba(232,121,249,0.08);
+            border-color: rgba(232,121,249,0.2);
             color: var(--amber);
         }
 
@@ -646,8 +646,8 @@
         }
         .xp-title { font-size: 1.1rem; font-weight: 700; color: var(--text-1); }
         .xp-badge {
-            background: rgba(34,211,238,0.08);
-            border: 1px solid rgba(34,211,238,0.2);
+            background: rgba(14,165,233,0.08);
+            border: 1px solid rgba(14,165,233,0.2);
             color: var(--cyan);
             font-size: 0.72rem;
             font-weight: 600;
@@ -776,7 +776,7 @@
             border-color: var(--border-lit);
             background: var(--surface-3);
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(34,211,238,0.15);
+            box-shadow: 0 12px 40px rgba(14,165,233,0.15);
         }
         .cb-icon {
             width: 40px; height: 40px;
@@ -878,9 +878,195 @@
             .xp-icon { display: none; }
             .contact-row { flex-direction: column; align-items: center; }
         }
+
+        /* ═══════════════════════════════════════════
+           FUTURISTIC UPGRADES
+        ═══════════════════════════════════════════ */
+
+        /* ── Custom Cursor ── */
+        .cursor-dot, .cursor-ring {
+            position: fixed; pointer-events: none; z-index: 9999; border-radius: 50%;
+            transition: opacity 0.3s;
+        }
+        .cursor-dot {
+            width: 6px; height: 6px;
+            background: var(--cyan);
+            box-shadow: 0 0 12px var(--cyan), 0 0 28px var(--cyan);
+        }
+        .cursor-ring {
+            width: 34px; height: 34px;
+            border: 1.5px solid rgba(14,165,233,0.3);
+            transition: width 0.35s ease, height 0.35s ease, border-color 0.35s ease, transform 0.08s ease-out;
+        }
+        .cursor-dot.pressed { width: 4px; height: 4px; background: #fff; box-shadow: 0 0 20px #fff; }
+        .cursor-ring.hovering {
+            width: 52px; height: 52px;
+            border-color: rgba(99,102,241,0.7);
+            box-shadow: 0 0 20px rgba(99,102,241,0.3);
+        }
+        @media (max-width: 1024px) { .cursor-dot, .cursor-ring { display: none; } }
+
+        /* ── Hamburger + Mobile Nav ── */
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px;
+            background: none; border: none; cursor: pointer;
+            padding: 8px; z-index: 1001; position: relative;
+        }
+        .hamburger span {
+            display: block; width: 24px; height: 2px;
+            background: var(--text-1); border-radius: 2px;
+            transition: all 0.35s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        @media (max-width: 640px) { .hamburger { display: flex; } }
+
+        .mobile-nav {
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.96);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            z-index: 998;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center; gap: 2rem;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.45s ease;
+        }
+        .mobile-nav.active { opacity: 1; pointer-events: auto; }
+        .mobile-nav a {
+            color: var(--text-1); font-size: 1.6rem; font-weight: 700;
+            text-decoration: none; letter-spacing: -0.5px;
+            transition: all 0.25s;
+        }
+        .mobile-nav a:hover { color: var(--cyan); transform: scale(1.05); }
+        .mobile-nav .nav-hire-mob {
+            background: var(--grad); color: #000 !important;
+            padding: 12px 32px; border-radius: 12px; font-size: 1rem;
+        }
+
+        /* ── Typewriter ── */
+        .hero-role-wrap { display: inline-flex; align-items: baseline; }
+        .typewriter-cursor {
+            display: inline-block; width: 2.5px; height: 1.05em;
+            background: var(--cyan); margin-left: 4px;
+            vertical-align: text-bottom; border-radius: 2px;
+            animation: blink-cursor 0.9s step-end infinite;
+        }
+        @keyframes blink-cursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+        /* ── Active Nav Indicator ── */
+        .nav-links a { position: relative; }
+        .nav-links a.active-link {
+            color: var(--text-1) !important;
+            background: rgba(14,165,233,0.1) !important;
+        }
+        .nav-links a.active-link::after {
+            content: ''; position: absolute; bottom: 2px; left: 14px; right: 14px;
+            height: 2px; background: var(--grad); border-radius: 2px;
+        }
+
+        /* ── Parallax ── */
+        .parallax-slow { will-change: transform; }
+        .parallax-fast { will-change: transform; }
+
+        /* ── 3D Tilt Cards ── */
+        .proj-grid { perspective: 1200px; }
+        .proj-card {
+            transform-style: preserve-3d;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .proj-card-inner {
+            transition: transform 0.15s ease-out;
+            will-change: transform;
+        }
+
+        /* ── Magnetic Buttons ── */
+        .magnetic { transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+        /* ── Experience Timeline ── */
+        .xp-list { position: relative; padding-left: 44px; }
+        .xp-list::before {
+            content: ''; position: absolute; left: 20px; top: 0; bottom: 0;
+            width: 2px; border-radius: 1px;
+            background: linear-gradient(to bottom, var(--cyan) 0%, var(--violet) 50%, var(--pink) 100%);
+            opacity: 0.5;
+        }
+        .xp-card { position: relative; }
+        .xp-card::after {
+            content: ''; position: absolute;
+            left: -52px; top: 34px;
+            width: 16px; height: 16px;
+            border-radius: 50%;
+            background: var(--cyan);
+            border: 3px solid var(--black);
+            box-shadow: 0 0 16px var(--cyan), 0 0 40px rgba(14,165,233,0.3);
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        .xp-card:nth-child(2)::after {
+            background: var(--violet);
+            box-shadow: 0 0 16px var(--violet), 0 0 40px rgba(99,102,241,0.3);
+        }
+        .xp-card:hover::after {
+            transform: scale(1.5);
+            box-shadow: 0 0 24px var(--cyan), 0 0 60px rgba(14,165,233,0.5);
+        }
+        .xp-card:nth-child(2):hover::after {
+            box-shadow: 0 0 24px var(--violet), 0 0 60px rgba(99,102,241,0.5);
+        }
+        @media (max-width: 640px) {
+            .xp-list { padding-left: 32px; }
+            .xp-list::before { left: 12px; }
+            .xp-card::after { left: -38px; top: 20px; width: 12px; height: 12px; }
+        }
+
+        /* ── Skill Gauges ── */
+        .gauge-group { margin-top: 0.9rem; display: flex; flex-direction: column; gap: 0.6rem; }
+        .gauge-label { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-2); font-family: 'JetBrains Mono', monospace; font-weight: 500; }
+        .gauge-track { height: 4px; background: var(--surface-4); border-radius: 99px; overflow: hidden; }
+        .gauge-fill { height: 100%; background: var(--grad); border-radius: 99px; width: 0; transition: width 1.4s cubic-bezier(0.22, 0.61, 0.36, 1); }
+        .skill-cell:hover .gauge-fill { filter: brightness(1.3); }
+
+        /* ── Project Filter Tabs ── */
+        .filter-bar {
+            display: flex; justify-content: center; gap: 8px;
+            margin-bottom: 2.5rem; flex-wrap: wrap;
+        }
+        .filter-btn {
+            background: var(--surface-2); border: 1px solid var(--border);
+            color: var(--text-2); padding: 9px 20px; border-radius: 99px;
+            font-size: 0.82rem; font-weight: 600; cursor: pointer;
+            transition: all 0.3s ease; font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: 0.2px;
+        }
+        .filter-btn:hover { border-color: var(--border-lit); color: var(--text-1); transform: translateY(-2px); }
+        .filter-btn.active { background: var(--grad); color: #000; border-color: transparent; box-shadow: 0 4px 20px rgba(14,165,233,0.35); }
+
+        /* ── Back to Top ── */
+        .back-top {
+            position: fixed; bottom: 32px; right: 32px;
+            width: 50px; height: 50px; border-radius: 50%;
+            background: var(--surface-2); border: 1px solid var(--border);
+            cursor: pointer; opacity: 0; pointer-events: none;
+            transition: all 0.35s ease; z-index: 99;
+            display: flex; align-items: center; justify-content: center;
+            overflow: visible;
+        }
+        .back-top.visible { opacity: 1; pointer-events: auto; }
+        .back-top:hover { border-color: var(--cyan); box-shadow: 0 0 30px rgba(14,165,233,0.3); transform: translateY(-3px); }
+        .back-top svg { color: var(--text-1); width: 20px; height: 20px; position: relative; z-index: 1; }
+        .back-top-ring {
+            position: absolute; inset: -4px; border-radius: 50%;
+            pointer-events: none;
+        }
+        @media (max-width: 640px) { .back-top { bottom: 20px; right: 20px; width: 42px; height: 42px; } }
     </style>
 </head>
 <body>
+
+<div class="cursor-dot" id="cursor-dot"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
 
 <canvas id="bg-canvas"></canvas>
 
@@ -888,15 +1074,26 @@
 <nav id="nav">
     <div class="container">
         <div class="nav-logo">Amir Ali</div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact" class="nav-hire">Hire Me</a></li>
         </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </nav>
+
+<div class="mobile-nav" id="mobile-nav">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact" class="nav-hire-mob">Hire Me</a>
+</div>
 
 <!-- ═══ HERO ═══ -->
 <header id="home">
@@ -912,7 +1109,12 @@
 
         <h1>
             <span class="hero-name">Amir Ali</span>
-            <span class="hero-role">Senior Frontend Engineer</span>
+            <span class="hero-role">
+                <span class="hero-role-wrap">
+                    <span id="typewriter-text">Senior Frontend Engineer</span>
+                    <span class="typewriter-cursor"></span>
+                </span>
+            </span>
         </h1>
 
         <p class="hero-desc">
@@ -1024,6 +1226,11 @@
                     <span class="tag">GraphQL</span>
                     <span class="tag">PWA</span>
                 </div>
+                <div class="gauge-group">
+                    <div class="gauge"><div class="gauge-label"><span>React</span><span>98%</span></div><div class="gauge-track"><div class="gauge-fill" data-pct="98"></div></div></div>
+                    <div class="gauge"><div class="gauge-label"><span>TypeScript</span><span>95%</span></div><div class="gauge-track"><div class="gauge-fill" data-pct="95"></div></div></div>
+                    <div class="gauge"><div class="gauge-label"><span>Next.js</span><span>90%</span></div><div class="gauge-track"><div class="gauge-fill" data-pct="90"></div></div></div>
+                </div>
             </div>
             <div class="skill-cell">
                 <span class="skill-icon">🧪</span>
@@ -1034,6 +1241,10 @@
                     <span class="tag violet">Gherkin</span>
                     <span class="tag violet">WCAG</span>
                     <span class="tag violet">a11y</span>
+                </div>
+                <div class="gauge-group">
+                    <div class="gauge"><div class="gauge-label"><span>E2E Testing</span><span>92%</span></div><div class="gauge-track"><div class="gauge-fill" data-pct="92"></div></div></div>
+                    <div class="gauge"><div class="gauge-label"><span>Accessibility</span><span>88%</span></div><div class="gauge-track"><div class="gauge-fill" data-pct="88"></div></div></div>
                 </div>
             </div>
             <div class="skill-cell">
@@ -1048,6 +1259,10 @@
                     <span class="tag amber">Kubernetes</span>
                     <span class="tag amber">AWS</span>
                 </div>
+                <div class="gauge-group">
+                    <div class="gauge"><div class="gauge-label"><span>Node.js</span><span>85%</span></div><div class="gauge-track"><div class="gauge-fill" data-pct="85"></div></div></div>
+                    <div class="gauge"><div class="gauge-label"><span>PostgreSQL</span><span>78%</span></div><div class="gauge-track"><div class="gauge-fill" data-pct="78"></div></div></div>
+                </div>
             </div>
             <div class="skill-cell">
                 <span class="skill-icon">🛠️</span>
@@ -1060,6 +1275,10 @@
                     <span class="tag">REST</span>
                     <span class="tag">WebSocket</span>
                 </div>
+                <div class="gauge-group">
+                    <div class="gauge"><div class="gauge-label"><span>DevOps</span><span>82%</span></div><div class="gauge-track"><div class="gauge-fill" data-pct="82"></div></div></div>
+                    <div class="gauge"><div class="gauge-label"><span>CI/CD</span><span>86%</span></div><div class="gauge-track"><div class="gauge-fill" data-pct="86"></div></div></div>
+                </div>
             </div>
             <div class="skill-cell">
                 <span class="skill-icon">🔗</span>
@@ -1070,6 +1289,10 @@
                     <span class="tag violet">Smart Contracts</span>
                     <span class="tag violet">Web3.js</span>
                 </div>
+                <div class="gauge-group">
+                    <div class="gauge"><div class="gauge-label"><span>Solidity</span><span>70%</span></div><div class="gauge-track"><div class="gauge-fill" data-pct="70"></div></div></div>
+                    <div class="gauge"><div class="gauge-label"><span>Web3</span><span>75%</span></div><div class="gauge-track"><div class="gauge-fill" data-pct="75"></div></div></div>
+                </div>
             </div>
             <div class="skill-cell">
                 <span class="skill-icon">🤖</span>
@@ -1078,6 +1301,9 @@
                     <span class="tag pink">Generative AI</span>
                     <span class="tag pink">AI Integration</span>
                     <span class="tag pink">LLM APIs</span>
+                </div>
+                <div class="gauge-group">
+                    <div class="gauge"><div class="gauge-label"><span>AI Integration</span><span>80%</span></div><div class="gauge-track"><div class="gauge-fill" data-pct="80"></div></div></div>
                 </div>
             </div>
         </div>
@@ -1142,10 +1368,18 @@
             <p class="section-sub">Projects that demonstrate range, technical depth, and real-world impact.</p>
         </div>
 
-        <div class="proj-grid">
-            <div class="proj-card reveal">
+        <div class="filter-bar reveal" id="filter-bar">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="blockchain">Blockchain</button>
+            <button class="filter-btn" data-filter="testing">Testing</button>
+            <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+
+        <div class="proj-grid" id="proj-grid">
+            <div class="proj-card reveal" data-category="frontend">
                 <div class="proj-head ph-1"><span class="proj-head-icon">🌐</span></div>
-                <div class="proj-body">
+                <div class="proj-body proj-card-inner">
                     <h3>Large-Scale E-Commerce Platform</h3>
                     <p>Global marketplace frontend serving millions of users. Complex state management, real-time updates, and performance tuning across diverse markets.</p>
                     <div class="proj-tags">
@@ -1157,9 +1391,9 @@
                 </div>
             </div>
 
-            <div class="proj-card reveal">
+            <div class="proj-card reveal" data-category="frontend">
                 <div class="proj-head ph-2"><span class="proj-head-icon">🎨</span></div>
-                <div class="proj-body">
+                <div class="proj-body proj-card-inner">
                     <h3>Design System & Component Library</h3>
                     <p>Multi-product design system with full WCAG 2.1 AA compliance, documented in Storybook, and adopted across several engineering teams.</p>
                     <div class="proj-tags">
@@ -1171,9 +1405,9 @@
                 </div>
             </div>
 
-            <div class="proj-card reveal">
+            <div class="proj-card reveal" data-category="blockchain">
                 <div class="proj-head ph-3"><span class="proj-head-icon">🔗</span></div>
-                <div class="proj-body">
+                <div class="proj-body proj-card-inner">
                     <h3>Blockchain Integration Platform</h3>
                     <p>Decentralized apps on Ethereum and Hyperledger with smart contracts and seamless Web3 integration into modern web interfaces.</p>
                     <div class="proj-tags">
@@ -1185,9 +1419,9 @@
                 </div>
             </div>
 
-            <div class="proj-card reveal">
+            <div class="proj-card reveal" data-category="other">
                 <div class="proj-head ph-4"><span class="proj-head-icon">🚀</span></div>
-                <div class="proj-body">
+                <div class="proj-body proj-card-inner">
                     <h3>Progressive Web Application</h3>
                     <p>High-performance PWA with offline support, push notifications, and native feel. Lighthouse 95+ across all categories.</p>
                     <div class="proj-tags">
@@ -1199,9 +1433,9 @@
                 </div>
             </div>
 
-            <div class="proj-card reveal">
+            <div class="proj-card reveal" data-category="testing">
                 <div class="proj-head ph-5"><span class="proj-head-icon">🧪</span></div>
-                <div class="proj-body">
+                <div class="proj-body proj-card-inner">
                     <h3>Automated Testing Framework</h3>
                     <p>End-to-end BDD infrastructure with Playwright & Cucumber. Reduced regression rate by 70% and boosted team confidence in CI/CD pipelines.</p>
                     <div class="proj-tags">
@@ -1213,9 +1447,9 @@
                 </div>
             </div>
 
-            <div class="proj-card reveal">
+            <div class="proj-card reveal" data-category="frontend">
                 <div class="proj-head ph-6"><span class="proj-head-icon">📊</span></div>
-                <div class="proj-body">
+                <div class="proj-body proj-card-inner">
                     <h3>Real-Time Analytics Dashboard</h3>
                     <p>Live data visualization with WebSocket streaming, D3.js charting, and advanced filtering — built to handle high-throughput data without UI degradation.</p>
                     <div class="proj-tags">
@@ -1280,130 +1514,363 @@
     </div>
 </footer>
 
+<button class="back-top" id="back-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"/>
+    </svg>
+    <svg class="back-top-ring" id="back-top-ring" viewBox="0 0 58 58">
+        <circle id="btg-circle" cx="29" cy="29" r="26" fill="none" stroke="url(#btg)" stroke-width="3" stroke-linecap="round"
+                stroke-dasharray="163.36" stroke-dashoffset="163.36" transform="rotate(-90 29 29)"/>
+        <defs><linearGradient id="btg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#0ea5e9"/><stop offset="50%" stop-color="#6366f1"/><stop offset="100%" stop-color="#d946ef"/>
+        </linearGradient></defs>
+    </svg>
+</button>
+
 <script>
-    // ── Canvas particle constellation ──────────────────────────────
-    (function () {
-        const canvas = document.getElementById('bg-canvas');
-        const ctx = canvas.getContext('2d');
-        const COLORS = ['#22d3ee', '#a78bfa', '#f472b6', '#22d3ee', '#a78bfa'];
-        const COUNT = 88;
-        const MAX_DIST = 130;
-        const MOUSE_RADIUS = 160;
-        let W, H, mouse = { x: -9999, y: -9999 }, dpr, raf;
+(function () {
+    'use strict';
 
-        function resize() {
-            dpr = Math.min(window.devicePixelRatio || 1, 2);
-            W = window.innerWidth;
-            H = window.innerHeight;
-            canvas.width  = W * dpr;
-            canvas.height = H * dpr;
-            canvas.style.width  = W + 'px';
-            canvas.style.height = H + 'px';
-            ctx.scale(dpr, dpr);
+    // ═══════════════════════════════════════════════
+    // 1. CANVAS PARTICLE CONSTELLATION
+    // ═══════════════════════════════════════════════
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    const COLORS = ['#0ea5e9', '#6366f1', '#d946ef', '#0ea5e9', '#6366f1'];
+    const TOTAL = 88;
+    const MAX_DIST = 130;
+    const MOUSE_RADIUS = 160;
+    let W, H, mouse = { x: -9999, y: -9999 }, dpr, raf;
+
+    function resize() {
+        dpr = Math.min(window.devicePixelRatio || 1, 2);
+        W = window.innerWidth;
+        H = window.innerHeight;
+        canvas.width  = W * dpr;
+        canvas.height = H * dpr;
+        canvas.style.width  = W + 'px';
+        canvas.style.height = H + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function rand(a, b) { return a + Math.random() * (b - a); }
+
+    const pts = Array.from({ length: TOTAL }, () => ({
+        x:  rand(0, window.innerWidth),
+        y:  rand(0, window.innerHeight),
+        vx: rand(-0.22, 0.22),
+        vy: rand(-0.22, 0.22),
+        r:  rand(1, 2.2),
+        c:  COLORS[Math.floor(Math.random() * COLORS.length)],
+        a:  rand(0.35, 0.85),
+    }));
+
+    function hexToRgb(hex) {
+        const r = parseInt(hex.slice(1,3),16);
+        const g = parseInt(hex.slice(3,5),16);
+        const b = parseInt(hex.slice(5,7),16);
+        return `${r},${g},${b}`;
+    }
+
+    let scrollY = 0, heroH = window.innerHeight;
+    window.addEventListener('scroll', () => { scrollY = window.scrollY; }, { passive: true });
+    window.addEventListener('resize', () => { heroH = window.innerHeight; });
+
+    function tick() {
+        ctx.clearRect(0, 0, W, H);
+        const inHero = scrollY < heroH * 0.7;
+
+        for (const p of pts) {
+            const dx = mouse.x - p.x, dy = mouse.y - p.y;
+            const d = Math.sqrt(dx*dx + dy*dy);
+            if (d < MOUSE_RADIUS && d > 1) {
+                const f = (1 - d / MOUSE_RADIUS) * 0.012;
+                p.vx += dx * f;
+                p.vy += dy * f;
+            }
+            const spd = Math.sqrt(p.vx*p.vx + p.vy*p.vy);
+            if (spd > 0.7) { p.vx *= 0.7/spd; p.vy *= 0.7/spd; }
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < -6) p.x = W + 6;
+            if (p.x > W + 6) p.x = -6;
+            if (p.y < -6) p.y = H + 6;
+            if (p.y > H + 6) p.y = -6;
         }
 
-        function rand(a, b) { return a + Math.random() * (b - a); }
-
-        const pts = Array.from({ length: COUNT }, () => ({
-            x:  rand(0, window.innerWidth),
-            y:  rand(0, window.innerHeight),
-            vx: rand(-0.22, 0.22),
-            vy: rand(-0.22, 0.22),
-            r:  rand(1, 2.2),
-            c:  COLORS[Math.floor(Math.random() * COLORS.length)],
-            a:  rand(0.35, 0.85),
-        }));
-
-        function hexToRgb(hex) {
-            const r = parseInt(hex.slice(1,3),16);
-            const g = parseInt(hex.slice(3,5),16);
-            const b = parseInt(hex.slice(5,7),16);
-            return `${r},${g},${b}`;
-        }
-
-        function tick() {
-            ctx.clearRect(0, 0, W, H);
-
-            // Move
-            for (const p of pts) {
-                // Gentle mouse attraction
-                const dx = mouse.x - p.x, dy = mouse.y - p.y;
-                const d  = Math.sqrt(dx*dx + dy*dy);
-                if (d < MOUSE_RADIUS && d > 1) {
-                    const f = (1 - d / MOUSE_RADIUS) * 0.012;
-                    p.vx += dx * f;
-                    p.vy += dy * f;
+        // Lines (fewer connections when not in hero)
+        const maxPairs = inHero ? pts.length : Math.floor(pts.length * 0.5);
+        for (let i = 0; i < maxPairs; i++) {
+            for (let j = i + 1; j < pts.length; j++) {
+                const dx = pts[i].x - pts[j].x;
+                const dy = pts[i].y - pts[j].y;
+                const d = Math.sqrt(dx*dx + dy*dy);
+                const maxD = inHero ? MAX_DIST : MAX_DIST * 0.6;
+                if (d < maxD) {
+                    const alpha = (1 - d / maxD) * (inHero ? 0.18 : 0.08);
+                    ctx.beginPath();
+                    ctx.moveTo(pts[i].x, pts[i].y);
+                    ctx.lineTo(pts[j].x, pts[j].y);
+                    ctx.strokeStyle = `rgba(${hexToRgb(pts[i].c)},${alpha})`;
+                    ctx.lineWidth = 0.8;
+                    ctx.stroke();
                 }
-                // Speed clamp
-                const spd = Math.sqrt(p.vx*p.vx + p.vy*p.vy);
-                if (spd > 0.7) { p.vx *= 0.7/spd; p.vy *= 0.7/spd; }
-
-                p.x += p.vx;
-                p.y += p.vy;
-
-                // Wrap
-                if (p.x < -6) p.x = W + 6;
-                if (p.x > W + 6) p.x = -6;
-                if (p.y < -6) p.y = H + 6;
-                if (p.y > H + 6) p.y = -6;
             }
-
-            // Lines
-            for (let i = 0; i < pts.length; i++) {
-                for (let j = i + 1; j < pts.length; j++) {
-                    const dx = pts[i].x - pts[j].x;
-                    const dy = pts[i].y - pts[j].y;
-                    const d  = Math.sqrt(dx*dx + dy*dy);
-                    if (d < MAX_DIST) {
-                        const alpha = (1 - d / MAX_DIST) * 0.18;
-                        ctx.beginPath();
-                        ctx.moveTo(pts[i].x, pts[i].y);
-                        ctx.lineTo(pts[j].x, pts[j].y);
-                        ctx.strokeStyle = `rgba(${hexToRgb(pts[i].c)},${alpha})`;
-                        ctx.lineWidth = 0.8;
-                        ctx.stroke();
-                    }
-                }
-            }
-
-            // Dots
-            for (const p of pts) {
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(${hexToRgb(p.c)},${p.a})`;
-                ctx.shadowColor = p.c;
-                ctx.shadowBlur  = 6;
-                ctx.fill();
-                ctx.shadowBlur = 0;
-            }
-
-            raf = requestAnimationFrame(tick);
         }
 
+        for (const p of pts) {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${hexToRgb(p.c)},${p.a})`;
+            ctx.shadowColor = p.c;
+            ctx.shadowBlur = 6;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+        }
+
+        raf = requestAnimationFrame(tick);
+    }
+
+    resize();
+    window.addEventListener('resize', () => {
+        cancelAnimationFrame(raf);
         resize();
-        window.addEventListener('resize', () => { cancelAnimationFrame(raf); resize(); tick(); });
-        window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
-        window.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+        // Re-spread particles across new dimensions
+        for (const p of pts) {
+            p.x = Math.min(Math.max(p.x, 0), W);
+            p.y = Math.min(Math.max(p.y, 0), H);
+        }
         tick();
-    })();
+    });
+    window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
+    window.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+    tick();
 
-    // Nav on scroll
+    // ═══════════════════════════════════════════════
+    // 2. CUSTOM CURSOR
+    // ═══════════════════════════════════════════════
+    const cursorDot = document.getElementById('cursor-dot');
+    const cursorRing = document.getElementById('cursor-ring');
+    if (cursorDot && cursorRing && window.matchMedia('(min-width: 1025px)').matches) {
+        let cx = -50, cy = -50, rx = -50, ry = -50;
+        document.addEventListener('mousemove', e => {
+            cx = e.clientX; cy = e.clientY;
+            cursorDot.style.transform = `translate(${cx - 3}px, ${cy - 3}px)`;
+        }, { passive: true });
+        document.addEventListener('mousedown', () => { cursorDot.classList.add('pressed'); cursorRing.classList.add('pressed'); });
+        document.addEventListener('mouseup', () => { cursorDot.classList.remove('pressed'); cursorRing.classList.remove('pressed'); });
+
+        // Hoverable elements
+        const hoverTargets = document.querySelectorAll('a, button, .btn, .xp-card, .proj-card, .skill-cell, .contact-btn, .filter-btn');
+        hoverTargets.forEach(el => {
+            el.addEventListener('mouseenter', () => { cursorRing.classList.add('hovering'); cursorDot.classList.add('hovering'); });
+            el.addEventListener('mouseleave', () => { cursorRing.classList.remove('hovering'); cursorDot.classList.remove('hovering'); });
+        });
+
+        function animateRing() {
+            rx += (cx - rx) * 0.12;
+            ry += (cy - ry) * 0.12;
+            cursorRing.style.transform = `translate(${rx - 17}px, ${ry - 17}px)`;
+            requestAnimationFrame(animateRing);
+        }
+        animateRing();
+    }
+
+    // ═══════════════════════════════════════════════
+    // 3. MOBILE NAV
+    // ═══════════════════════════════════════════════
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    if (hamburger && mobileNav) {
+        hamburger.addEventListener('click', () => {
+            const open = hamburger.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            document.body.style.overflow = open ? 'hidden' : '';
+        });
+        mobileNav.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
+
+    // ═══════════════════════════════════════════════
+    // 4. TYPEWRITER
+    // ═══════════════════════════════════════════════
+    const twText = document.getElementById('typewriter-text');
+    if (twText) {
+        const roles = ['Senior Frontend Engineer', 'Design Systems Architect', 'Web Performance Enthusiast', 'Blockchain Explorer'];
+        let ri = 0, ci = 0, deleting = false;
+        function type() {
+            const current = roles[ri];
+            if (!deleting) {
+                twText.textContent = current.slice(0, ci + 1);
+                ci++;
+                if (ci === current.length) { deleting = true; setTimeout(type, 2200); return; }
+                setTimeout(type, 60 + Math.random() * 50);
+            } else {
+                twText.textContent = current.slice(0, ci);
+                ci--;
+                if (ci < 0) { deleting = false; ri = (ri + 1) % roles.length; setTimeout(type, 300); return; }
+                setTimeout(type, 25);
+            }
+        }
+        setTimeout(type, 1200);
+    }
+
+    // ═══════════════════════════════════════════════
+    // 5. NAV SCROLL + ACTIVE LINK
+    // ═══════════════════════════════════════════════
     const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), { passive: true });
+    const sections = [];
+    document.querySelectorAll('section, header').forEach(s => sections.push({ id: s.id, el: s }));
+    const navLinks = document.querySelectorAll('#nav-links a');
 
-    // Smooth scroll
+    function updateActiveLink() {
+        const sy = window.scrollY + window.innerHeight / 3;
+        let active = '';
+        for (const s of sections) {
+            if (s.el && s.el.offsetTop <= sy) active = s.id;
+        }
+        navLinks.forEach(a => {
+            a.classList.toggle('active-link', a.getAttribute('href') === '#' + active);
+        });
+        // Mobile nav too
+        mobileNav.querySelectorAll('a').forEach(a => {
+            a.style.color = a.getAttribute('href') === '#' + active ? 'var(--cyan)' : '';
+        });
+    }
+
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 20);
+        updateActiveLink();
+    }, { passive: true });
+
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
             e.preventDefault();
-            document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const target = document.querySelector(a.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
 
-    // Reveal on scroll
+    // ═══════════════════════════════════════════════
+    // 6. PARALLAX
+    // ═══════════════════════════════════════════════
+    const parallaxEls = document.querySelectorAll('.glow-orb, .hero-wrap, .reveal, .xp-card, .proj-card');
+    function parallaxTick() {
+        const sy = window.scrollY;
+        parallaxEls.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const center = rect.top + rect.height / 2;
+            const vCenter = window.innerHeight / 2;
+            const dist = (center - vCenter) / window.innerHeight;
+            const speed = el.classList.contains('glow-orb') ? -25 : el.classList.contains('hero-wrap') ? -8 : -4;
+            el.style.transform = el.style.transform.replace(/translateY\([^)]*\)/, '') + ` translateY(${dist * speed}px)`;
+        });
+        requestAnimationFrame(parallaxTick);
+    }
+    requestAnimationFrame(parallaxTick);
+
+    // ═══════════════════════════════════════════════
+    // 7. MAGNETIC BUTTONS
+    // ═══════════════════════════════════════════════
+    document.querySelectorAll('.btn, .contact-btn, .nav-hire, .nav-hire-mob').forEach(btn => {
+        btn.classList.add('magnetic');
+        btn.addEventListener('mousemove', e => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0, 0)';
+        });
+    });
+
+    // ═══════════════════════════════════════════════
+    // 8. 3D TILT ON PROJECT CARDS
+    // ═══════════════════════════════════════════════
+    document.querySelectorAll('.proj-card').forEach(card => {
+        card.addEventListener('mousemove', e => {
+            const rect = card.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            card.style.transform = `rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translateY(-8px)`;
+            const glow = card.querySelector('.proj-head');
+            if (glow) glow.style.filter = `brightness(${1 + Math.abs(x) * 0.5})`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'rotateY(0deg) rotateX(0deg) translateY(0)';
+            const glow = card.querySelector('.proj-head');
+            if (glow) glow.style.filter = 'brightness(1)';
+        });
+    });
+
+    // ═══════════════════════════════════════════════
+    // 9. PROJECT FILTER
+    // ═══════════════════════════════════════════════
+    const filterBar = document.getElementById('filter-bar');
+    const projGrid = document.getElementById('proj-grid');
+    if (filterBar && projGrid) {
+        const filterBtns = filterBar.querySelectorAll('.filter-btn');
+        const cards = projGrid.querySelectorAll('.proj-card');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const cat = btn.dataset.filter;
+                cards.forEach((card, i) => {
+                    const match = cat === 'all' || card.dataset.category === cat;
+                    card.style.transition = `all 0.4s ease ${i * 0.05}s`;
+                    card.style.opacity = match ? '1' : '0';
+                    card.style.transform = match ? 'scale(1)' : 'scale(0.9)';
+                    card.style.pointerEvents = match ? 'auto' : 'none';
+                    card.style.position = match ? '' : 'absolute';
+                });
+                // Re-trigger tilt on visible cards
+                setTimeout(() => {
+                    cards.forEach((card, i) => {
+                        if (card.style.opacity === '1') {
+                            card.style.transition = 'all 0.35s ease';
+                            card.style.position = '';
+                        }
+                    });
+                }, 450);
+            });
+        });
+    }
+
+    // ═══════════════════════════════════════════════
+    // 10. BACK TO TOP
+    // ═══════════════════════════════════════════════
+    const backTop = document.getElementById('back-top');
+    const backTopCircle = document.getElementById('btg-circle');
+    if (backTop) {
+        function updateBackTop() {
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            const pct = scrollable > 0 ? Math.min(window.scrollY / scrollable, 1) : 0;
+            backTop.classList.toggle('visible', window.scrollY > 500);
+            if (backTopCircle) {
+                backTopCircle.setAttribute('stroke-dashoffset', 163.36 * (1 - pct));
+            }
+        }
+        window.addEventListener('scroll', updateBackTop, { passive: true });
+        backTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        updateBackTop();
+    }
+
+    // ═══════════════════════════════════════════════
+    // 11. REVEAL ON SCROLL
+    // ═══════════════════════════════════════════════
     const ro = new IntersectionObserver(entries => {
         entries.forEach((entry, i) => {
             if (entry.isIntersecting) {
-                entry.target.style.transitionDelay = `${(i % 4) * 0.08}s`;
+                entry.target.style.transitionDelay = `${(i % 5) * 0.07}s`;
                 entry.target.classList.add('in');
                 ro.unobserve(entry.target);
             }
@@ -1411,13 +1878,16 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
-    // Animated counters
+    // ═══════════════════════════════════════════════
+    // 12. ANIMATED COUNTERS
+    // ═══════════════════════════════════════════════
     const co = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
             entry.target.querySelectorAll('.stat-val').forEach(el => {
                 const max = +el.dataset.n, suf = el.dataset.s || '';
-                let v = 0, id = setInterval(() => {
+                let v = 0;
+                const id = setInterval(() => {
                     v += max / 45;
                     if (v >= max) { el.textContent = max + suf; clearInterval(id); }
                     else el.textContent = Math.floor(v) + suf;
@@ -1428,6 +1898,24 @@
     }, { threshold: 0.5 });
     const st = document.querySelector('.stats-inner');
     if (st) co.observe(st);
+
+    // ═══════════════════════════════════════════════
+    // 13. SKILL GAUGES ANIMATION
+    // ═══════════════════════════════════════════════
+    const gaugeObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.querySelectorAll('.gauge-fill').forEach((gauge, i) => {
+                setTimeout(() => {
+                    gauge.style.width = gauge.dataset.pct + '%';
+                }, i * 120);
+            });
+            gaugeObserver.unobserve(entry.target);
+        });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.skill-cell').forEach(cell => gaugeObserver.observe(cell));
+
+})();
 </script>
 </body>
 </html>
