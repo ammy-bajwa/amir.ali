@@ -195,6 +195,7 @@
 
         .hero-wrap {
             text-align: center;
+            position: relative;
             z-index: 2;
             max-width: 860px;
             padding: 0 24px;
@@ -316,15 +317,17 @@
             letter-spacing: 2px;
             font-family: 'JetBrains Mono', monospace;
             animation: fadeIn 1s ease 1.2s both;
+            z-index: 3;
         }
         .scroll-bar {
             width: 1px; height: 44px;
             background: linear-gradient(to bottom, transparent, var(--cyan));
             animation: grow 2.5s ease-in-out infinite;
+            transform-origin: top;
         }
         @keyframes grow {
-            0%,100% { transform: scaleY(0); transform-origin: top; opacity:0.5; }
-            50% { transform: scaleY(1); transform-origin: top; opacity:1; }
+            0%,100% { transform: scaleY(0); opacity:0.5; }
+            50% { transform: scaleY(1); opacity:1; }
         }
 
         /* ─────────────────────────────────────────
@@ -877,6 +880,15 @@
             .xp-card { grid-template-columns: 1fr; }
             .xp-icon { display: none; }
             .contact-row { flex-direction: column; align-items: center; }
+            .hero-name { font-size: clamp(2.5rem, 10vw, 3.5rem); }
+            .hero-role { font-size: clamp(1.1rem, 4vw, 1.6rem); }
+            .hero-desc { font-size: 0.92rem; margin-bottom: 1.25rem; max-width: 100%; }
+            .hero-badge { margin-bottom: 1rem; font-size: 0.7rem; }
+            .hero-role { margin-bottom: 0.75rem; }
+            .hero-scroll { bottom: 6px; }
+            .scroll-bar { height: 20px; }
+            .hero-btns { gap: 0.65rem; }
+            .btn { padding: 11px 22px; font-size: 0.82rem; }
         }
 
         /* ═══════════════════════════════════════════
@@ -1055,10 +1067,10 @@
         }
         .back-top.visible { opacity: 1; pointer-events: auto; }
         .back-top:hover { border-color: var(--cyan); box-shadow: 0 0 30px rgba(14,165,233,0.3); transform: translateY(-3px); }
-        .back-top svg { color: var(--text-1); width: 20px; height: 20px; position: relative; z-index: 1; }
+        .back-top svg:not(.back-top-ring) { color: var(--text-1); width: 20px; height: 20px; position: relative; z-index: 1; }
         .back-top-ring {
             position: absolute; inset: -4px; border-radius: 50%;
-            pointer-events: none;
+            pointer-events: none; z-index: 0;
         }
         @media (max-width: 640px) { .back-top { bottom: 20px; right: 20px; width: 42px; height: 42px; } }
     </style>
@@ -1858,10 +1870,14 @@
             }
         }
         window.addEventListener('scroll', updateBackTop, { passive: true });
+        window.addEventListener('resize', updateBackTop, { passive: true });
+        window.addEventListener('load', updateBackTop, { passive: true });
         backTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         updateBackTop();
+        // Recalc after fonts render (Google Fonts are async)
+        requestAnimationFrame(() => requestAnimationFrame(updateBackTop));
     }
 
     // ═══════════════════════════════════════════════
